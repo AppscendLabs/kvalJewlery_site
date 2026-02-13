@@ -116,61 +116,56 @@ export const Header: React.FC = () => {
                   <Menu className="size-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="bg-black text-white">
-                <SheetHeader>
-                  <SheetTitle className="text-white">Menu</SheetTitle>
+              <SheetContent className="border-gray-800 bg-black text-white">
+                <SheetHeader className="px-6 pb-2 pt-6">
+                  <SheetTitle className="text-lg text-white">Menu</SheetTitle>
                 </SheetHeader>
-                <nav className="mt-6 flex flex-col gap-4">
+                <nav className="flex flex-col gap-1 px-6 pt-4">
                   <Link
                     href="/"
-                    className={`py-2 transition-colors hover:text-yellow-500 ${
-                      isActive('/') ? 'text-yellow-500 font-semibold' : 'text-gray-300'
+                    className={`rounded-lg px-3 py-3 text-base transition-colors hover:bg-gray-900 hover:text-yellow-500 ${
+                      isActive('/') ? 'bg-gray-900 text-yellow-500 font-semibold' : 'text-gray-300'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
-                    {isActive('/') && <span className="ml-2">•</span>}
                   </Link>
                   <Link
                     href="/shop"
-                    className={`py-2 transition-colors hover:text-yellow-500 ${
-                      isActive('/shop') ? 'text-yellow-500 font-semibold' : 'text-gray-300'
+                    className={`rounded-lg px-3 py-3 text-base transition-colors hover:bg-gray-900 hover:text-yellow-500 ${
+                      isActive('/shop') ? 'bg-gray-900 text-yellow-500 font-semibold' : 'text-gray-300'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Shop
-                    {isActive('/shop') && <span className="ml-2">•</span>}
                   </Link>
                   <Link
                     href="/contact"
-                    className={`py-2 transition-colors hover:text-yellow-500 ${
-                      isActive('/contact') ? 'text-yellow-500 font-semibold' : 'text-gray-300'
+                    className={`rounded-lg px-3 py-3 text-base transition-colors hover:bg-gray-900 hover:text-yellow-500 ${
+                      isActive('/contact') ? 'bg-gray-900 text-yellow-500 font-semibold' : 'text-gray-300'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Contact
-                    {isActive('/contact') && <span className="ml-2">•</span>}
                   </Link>
                   <Link
                     href="/cart"
-                    className={`py-2 transition-colors hover:text-yellow-500 ${
-                      isActive('/cart') ? 'text-yellow-500 font-semibold' : 'text-gray-300'
+                    className={`rounded-lg px-3 py-3 text-base transition-colors hover:bg-gray-900 hover:text-yellow-500 ${
+                      isActive('/cart') ? 'bg-gray-900 text-yellow-500 font-semibold' : 'text-gray-300'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Cart
-                    {isActive('/cart') && <span className="ml-2">•</span>}
                   </Link>
                   {isAdmin && (
                     <Link
                       href="/admin"
-                      className={`py-2 transition-colors hover:text-yellow-500 ${
-                        isActive('/admin') ? 'text-yellow-500 font-semibold' : 'text-gray-300'
+                      className={`rounded-lg px-3 py-3 text-base transition-colors hover:bg-gray-900 hover:text-yellow-500 ${
+                        isActive('/admin') ? 'bg-gray-900 text-yellow-500 font-semibold' : 'text-gray-300'
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Admin Portal
-                      {isActive('/admin') && <span className="ml-2">•</span>}
                     </Link>
                   )}
                 </nav>
